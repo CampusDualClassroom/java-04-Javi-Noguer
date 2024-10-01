@@ -12,6 +12,7 @@ public class Exercise04 {
         System.out.println("Suma de los primeros 5 números: " + sumNum(5, 1, 0));
         System.out.println("Suma de los primeros 20 números pares: " + sumEvenNum(20, 2,0));
         System.out.println("Obtén el factorial del número 7 → (7!): " + sumFactorial(7));
+        System.out.println("Obtén con función recursiva el factorial del número 7 → (7!): " + recursiveFactorial(7));
     }
 
 
@@ -26,8 +27,10 @@ public class Exercise04 {
     public static int sumEvenNum(int limite1, int incremento1, int inicio1) {
         int suma1 = 0;
         int numero1;
-        for (numero1 = inicio1; numero1 <= 2*limite1; numero1 += incremento1) {
-            suma1 += numero1;
+        for (numero1 = inicio1; numero1 <= limite1; numero1 += incremento1) {
+            if (numero1 % 2 == 0) {
+                suma1 += numero1;
+            }
         }
         return suma1;
     }
@@ -39,11 +42,15 @@ public class Exercise04 {
         return producto;
     }
     public static void recursiveFactorial(int num) {
-        public static int factorial (int num) {
-            if (num == 0) {
-                return 1;
-            } else
-                return num * factorial(num - 1);
+            factorial(num);
         }
+        public static int factorial(int n) {
+            int producto = 0;
+            for (int i = 1; i < n+1; i++) {
+                producto = producto * i;
+            }
+        return(0);
+        }
+
     }
 }
